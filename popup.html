@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="jquery.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <H3>Podio Options Clicker</H3>
+
+    <label for="fields">Fields</label>
+    <textarea type="text" id="Data" name="fields" style="width: 400px; height: 100px; max-width: 400px; max-height: 300px;"></textarea><br>
+    If nothing happens when submitting, refresh page! <br><br>
+
+    <div class="switch-toggle switch-3 switch-candy">
+      <input type="radio" id="add" name="state">
+      <label for="add">ADD</label>
+
+      <input type="radio" id="toggle" name="state" checked="">
+      <label for="toggle">TOGGLE</label> 
+
+      <input type="radio" id="remove" name="state">
+      <label for="remove">REMOVE</label>
+    </div>
+
+    <button id="submitButton" type="button">Start</button>
+    <div id="result"></div>
+
+    <script src="popup.js" type="text/javascript"></script>
+
+  </body>
+
+  <style>
+    .switch-toggle {
+      float: right;
+      margin-right: 5%;
+      background: #242729;
+   }
+   .switch-toggle input {
+     position: absolute;
+     opacity: 0;
+   }
+   .switch-toggle input + label {
+     padding: 7px;
+     float: left;
+     color: #fff;
+     cursor: pointer;
+   }
+   .switch-toggle input:checked + label {
+     background: green;
+   }
+  </style>
+
+</html>
